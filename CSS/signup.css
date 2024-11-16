@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('/Images/tru.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-container {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    color: #ffffff;
+    backdrop-filter: blur(10px); /* Efekti i blurrimit për sfond transparent */
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-container img {
+    width: 100px; /* Përmasa e logos */
+    height: 100px;
+    border-radius: 50%; /* E bën logon rrethore */
+    border: 3px solid #4caf50; /* Kufiri rreth logos */
+    object-fit: cover;
+}
+
+.signup-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.form-group input, 
+.form-group select {
+    width: 95%; /* Siguron që të gjithë inputet kanë të njëjtën gjerësi */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    color: #000;
+    outline: none;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus, 
+.form-group select:focus {
+    background: #ffffff;
+    box-shadow: 0 0 5px rgba(72, 190, 150, 0.8);
+}
+
+button {
+    background: #4caf50;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background: #45a049;
+}
+
+p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+a {
+    color: #4caf50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
