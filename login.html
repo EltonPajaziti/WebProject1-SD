@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/CSS/login.css">
+    <link rel="icon" href="/Images/logo.png" type="image/png">
+</head>
+<body>
+    <div class="login-container">
+        <!-- Logo e MindEase -->
+        <div class="logo-container">
+            <img src="/Images/logo.png" alt="MindEase Logo">
+        </div>
+        <h1>Login</h1>
+        <form id="login-form">
+            <!-- Email -->
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <!-- Password -->
+            <div class="form-group">
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <!-- Remember Me -->
+            <div class="form-group-inline">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="remember-me" name="remember-me">
+                    <label for="remember-me">Remember me</label>
+                </div>
+            </div>
+            <button type="submit">Log In</button>
+        </form>
+        <p>Don't have an account? <a href="signup.html">Register</a></p>
+    </div>
+</body>
+</html>
