@@ -1,0 +1,440 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/*banner*/
+.banner {
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+    overflow: hidden;
+    height: 400px;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+}
+
+/*darken the image */
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    padding: 20px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+}
+
+.banner-content h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.banner-content p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+@media (min-width: 200px) {
+    .banner-content h1 {
+        font-size: 30px;
+    }
+
+    .banner-content p {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 600px) {
+    .banner-content h1 {
+        font-size: 2.5em;
+    }
+
+    .banner-content p {
+        font-size: 1.1em;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .banner-content h1 {
+        font-size: 3em;
+    }
+
+    .banner-content p {
+        font-size: 1.2em;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .banner-content h1 {
+        font-size: 3.5em;
+    }
+
+    .banner-content p {
+        font-size: 1.3em;
+    }
+}
+
+/* Contact Info Section */
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 60px 20px;
+    background: #ffffff;
+    color: #333333;
+}
+
+.info-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info-text {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+    margin-right: 20px;
+    text-align: left;
+}
+
+.info-text h2 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #2FA596;
+}
+
+.info-text p {
+    margin-bottom: 10px;
+    color: #666666;
+    font-size: 0.8em;
+    line-height: 1.4;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.detail {
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+    color: #333333;
+    margin-bottom: 4px;
+}
+
+.icon {
+    font-size: 1.5em;
+    margin-right: 10px;
+    color: #2FA596;
+    transition: color 0.3s ease;
+}
+
+.icon:hover {
+    color: #1d8a6a;
+}
+
+/* Styling for the map */
+.info-map {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+}
+
+.info-map iframe {
+    width: 100%;
+    height: 400px;
+    border: 0;
+    border-radius: 8px;
+}
+
+/* Contact Us Banner */
+.banneri {
+    background: linear-gradient(135deg, #74D6C2, #96ABBE);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.banneri h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-family: 'Dancing Script', cursive;
+    color: #2FA596;
+}
+
+.contact-form-container {
+    background-color: #FFFFFF;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 650px;
+    margin: 20px auto;
+    position: relative;
+    transform: none;
+}
+
+.contact-form-container h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="tel"] {
+    flex: 1 1 calc(50% - 10px);
+}
+
+
+@media (max-width: 600px) {
+
+    .input-group input[type="text"],
+    .input-group input[type="email"],
+    .input-group input[type="tel"],
+    .input-group input[type="text"],
+    .input-group textarea {
+        width: 100%;
+    }
+
+    .banneri h1 {
+        font-size: 2rem;
+    }
+
+    .contact-form-container h1 {
+        font-size: 1.5rem;
+    }
+}
+
+
+button {
+    background: linear-gradient(135deg, #96ABBE, #74D6C2);
+    color: white;
+    padding: 12px 0;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #74D6C2, #96ABBE);
+}
+
+
+/*Staff */
+.staff-section {
+    padding: 40px 20px;
+    background-color: #f0f8fa;
+    text-align: center;
+}
+
+.staff-section h2 {
+    font-size: 80px;
+    color: #333;
+    margin-bottom: 80px;
+    font-family: 'Dancing Script', cursive;
+    color: #2FA596;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.staff-card {
+    background-color: #e3eef3;
+    border-radius: 12px;
+    padding: 40px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding-top: 60px;
+    transition: transform 0.3s ease;
+    margin-bottom: 65px;
+}
+
+.staff-card:hover {
+    transform: translateY(-5px);
+}
+
+.staff-card img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    top: -75px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+.staff-card .role {
+    font-size: 0.9em;
+    text-transform: lowercase;
+    color: #999;
+    margin-top: 50px;
+    margin-bottom: 8px;
+}
+
+.staff-card .name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.staff-card .description {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+    padding: 0 10px;
+    line-height: 1.5;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-icons a {
+    font-size: 1.2em;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #2fa596;
+}
+
+/* Responsive Style for Staff section */
+@media (max-width: 1024px) {
+    .container {
+        gap: 20px;
+    }
+
+    .staff-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .staff-card {
+        width: 100%;
+        max-width: 320px;
+        margin-bottom: 60px;
+    }
+
+    .staff-card img {
+        width: 150px;
+        height: 150px;
+        top: -50px;
+    }
+
+    .staff-card .role {
+        margin-top: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .staff-section h2 {
+        font-size: 1.5em;
+    }
+
+    .staff-card {
+        padding: 15px;
+        padding-top: 50px;
+        margin-bottom: 80px;
+    }
+
+    .staff-card img {
+        width: 130px;
+        height: 130px;
+        top: -40px;
+    }
+
+    .staff-card .role {
+        font-size: 0.8em;
+        margin-top: 55px;
+    }
+
+    .staff-card .name {
+        font-size: 1em;
+    }
+
+    .staff-card .description {
+        font-size: 0.8em;
+        padding: 0 8px;
+    }
+
+    .social-icons a {
+        font-size: 1em;
+    }
+}
