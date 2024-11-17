@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relaxation Zone</title>
+    <link rel="stylesheet" href="CSS/relaxation.css">
+</head>
+<body>
+
+    <div class="background-container" id="background"></div>
+
+    <div class="relaxation-zone">
+        <div class="content">
+            <h1>Welcome to the Relaxation Zone</h1>
+            <p>Let yourself unwind with soothing sounds and relaxing visuals.</p>
+        </div>
+        
+        <select id="audio-select">
+            <option value="Images/ocean-waves.mp3">Ocean Waves</option>
+            <option value="Images/rain.mp3">Rain</option>
+            <option value="Images/forest.mp3">Forest Sounds</option>
+        </select>
+
+        <p>
+            <button id="play">Play</button>
+            <button id="stop">Stop</button>
+        </p>
+
+
+        <audio id="relaxing-sound" loop autoplay>
+            <source src="Images/ocean-waves.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <script src="JS/relaxation.js"></script>
+</body>
+</html>
