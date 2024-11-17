@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regjistrimi i Humorës</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f4f4f9;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background: #4caf50;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Regjistrimi i Humorës</h1>
+    <form id="mood-form">
+        <div class="form-group">
+            <label for="mood">Si e vlerësoni gjendjen tuaj sot?</label>
+            <select id="mood" required>
+                <option value="" disabled selected>Zgjidh një vlerë</option>
+                <option value="1">1 - Shumë keq</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 - Mesatar</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10 - Jashtëzakonisht mirë</option>
+            </select>
+        </div>
+        <button type="submit">Ruaj Humor</button>
+    </form>
+
+    <script>
+        document.getElementById('mood-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const mood = document.getElementById('mood').value;
+            const now = new Date();
+            const date = now.toISOString().split('T')[0]; // Formati YYYY-MM-DD
+            const time = now.toTimeString().split(' ')[0]; // Ora HH:MM:SS
+
+            // Merr të dhënat ekzistuese nga localStorage
+            const moodData = JSON.parse(localStorage.getItem('moodData')) || [];
+
+            // Shto humorin e ri
+            moodData.push({ date, time, mood });
+
+            // Ruaj të dhënat në localStorage
+            localStorage.setItem('moodData', JSON.stringify(moodData));
+
+            alert('Humori u regjistrua me sukses!');
+        });
+    </script>
+</body>
+</html>

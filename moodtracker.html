@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Tracker</title>
+    <link rel="stylesheet" href="/CSS/moodtracker.css">
+</head>
+<body>
+    <h1>Daily Mood Tracker</h1>
+    <form id="mood-form">
+        <div class="form-group">
+            <label for="mood">Rate your mood (1: Very bad, 10: Excellent):</label>
+            <select id="mood" required>
+                <option value="" disabled selected>Select a value</option>
+                <option value="1">1 - Very bad</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 - Average</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10 - Excellent</option>
+            </select>
+        </div>
+        <button type="submit">Submit Mood</button>
+    </form>
+
+    <h2>Daily Mood Report</h2>
+    <canvas id="daily-line-chart" width="1400" height="500"></canvas>
+
+    <h2>Weekly Mood Report</h2>
+    <canvas id="weekly-line-chart" width="1400" height="500"></canvas>
+
+<script src="/JS/moodtracker.js"></script>
+</body>
+</html>
