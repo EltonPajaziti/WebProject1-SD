@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/reflection_zone.css" />
+  </head>
+  <body>
+    <div class="reflection-container">
+      <h2>Reflection Zone</h2>
+      <input
+        type="text"
+        id="search-bar"
+        placeholder="Kërko mendimet..."
+        onkeyup="filterReflections()"
+      />
+      <textarea
+        id="reflection-input"
+        placeholder="Shkruaj mendimet e tua këtu..."
+      ></textarea>
+
+      <select id="emotion">
+        <option value="neutral">Neutral</option>
+        <option value="positive">Pozitiv</option>
+        <option value="negative">Negativ</option>
+      </select>
+
+      <button id="save-button" onclick="saveReflection()">
+        Save the Thought
+      </button>
+      <button id="export-button" onclick="exportReflections()">
+        Export Thoughts
+      </button>
+
+      <div id="reflection-list">
+        <ul id="saved-reflections"></ul>
+      </div>
+    </div>
+
+    <script src="JS/reflection_zone.js"></script>
+  </body>
+</html>
