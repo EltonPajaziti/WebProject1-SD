@@ -5,6 +5,7 @@
 
 body{
     font-family: Arial, sans-serif;
+    background-color: rgb(3, 59, 75);
 }
 
 nav {
@@ -55,8 +56,9 @@ nav h1{
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(to bottom, rgba(9, 31, 47, 0.8), rgba(9, 31, 47, 0.9));
+    padding: 20px 20px;
+    /* background: linear-gradient(to bottom, rgba(9, 31, 47, 0.8), rgba(9, 31, 47, 0.9)); */
+    background-color:  #96ABBE;
     color: #ffffff;
 }
 
@@ -141,18 +143,75 @@ nav h1{
 
 /* background-color:rgb(150, 171,190); */
 
-/*
 
-.carousel-inner {
-    max-width: 100%;
-    max-height: 500px;
-    overflow: hidden;
+#carouselExampleControls{
+    margin: 30px 200px;
 }
 
-.carousel-inner img {
-    object-fit: cover;
+.carousel-item{
+    width: 100%;
+    height: 500px;
+}
+
+.carousel-item img{
     width: 100%;
     height: 100%;
 }
 
-*/
+/*-------------------------------------------------------------------------------------*/
+
+.kryesori{
+    display: flex;
+    max-width: 100%;
+    color: white;
+    background-image: url('/Images/blur_hospital.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+
+.kryesori div{
+    max-width: 50%;
+}
+
+.i_pari{
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+
+}
+
+.i_dyti{
+    text-align: center;
+    background-color: #0b3a56;
+}
+
+#katrore{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 0;
+    justify-content: center;
+    max-width: 100%;
+    height: auto;
+}
+
+#katrore >div {
+    flex: 40%; /* Kjo pjese e bene qe dy ikona te jene ne nje rresht ndersa dy te tjerat ne rreshtin tjter */
+}
+
+.kombinimi{
+    text-align: center;
+    align-items: center;
+}
+
+.kombinimi img{
+
+    width: 150px;
+    height: 150px;
+    border-radius: 30%;
+    object-fit: cover;
+}
+
