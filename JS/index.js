@@ -20,3 +20,74 @@
 
 // document.getElementById("year").textContent = new Date().getFullYear();
 
+
+var numri = document.getElementById("map_number");
+var ikona = document.getElementById("map");
+
+ikona.onmouseover=function(){
+    ikona.style.transition="color 5s"
+    ikona.style.color = "red";
+    
+    var rrit=70;
+
+    var interval = setInterval(function() {
+
+        if(rrit>=1000) {
+            clearInterval(interval);
+        } else {
+            rrit++
+            numri.innerHTML=rrit;
+        }
+    }, 10);
+}
+
+
+var numri2 = document.getElementById("map_number2");
+var ikona2 = document.getElementById("map2");
+
+ikona2.onmouseover=function(){
+    ikona2.style.transition="color 5s"
+    ikona2.style.color = "red";
+    
+    var rrit=70;
+
+    var interval = setInterval(function() {
+
+        if(rrit>=1000) {
+            clearInterval(interval);
+        } else {
+            rrit++
+            numri2.innerHTML=rrit;
+        }
+    }, 10);
+}
+
+var numri3 = document.getElementById("map_number3");
+var ikona3 = document.getElementById("map3");
+
+ikona3.onmouseover=function(){
+    ikona3.style.transition="color 5s"
+    ikona3.style.color = "red";
+    
+    var rrit=70;
+
+    var interval = setInterval(function() {
+
+        if(rrit>=1000) {
+            clearInterval(interval);
+        } else {
+            rrit++
+            numri3.innerHTML=rrit;
+        }
+    }, 10);
+}
+
+document.addEventListener("scroll", function() {
+    const kryesori = document.querySelector(".kryesori");
+    const pozicioni = kryesori.getBoundingClientRect();
+    console.log(pozicioni.top); // Verifikoni vlerën e pozicionit
+
+    if (pozicioni.top < window.innerHeight && pozicioni.bottom > 0) {
+        kryesori.classList.add("shfaqet");
+    }
+});
