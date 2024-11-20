@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #f4f4f9;
+    color: #333;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+    font-size: 24px; /* Slightly larger font for titles */
+}
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background: #4caf50;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+canvas {
+    display: block;
+    margin: 40px auto; /* Larger margin for better spacing */
+    max-width: 100%;
+    width: 1400px; /* Increased width for better readability of labels */
+    height: 500px; /* Increased height for clarity */
+    border: 1px solid #ddd; /* Optional border for visual clarity */
+    border-radius: 8px; /* Rounded edges for better design */
+    background-color: #fefefe; /* Light white background for better contrast */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for a 3D effect */
+}
+
+h2 {
+    font-size: 20px; /* Font size for subtitles */
+    color: #333;
+    margin-bottom: 10px;
+}
