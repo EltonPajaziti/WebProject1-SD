@@ -275,3 +275,18 @@ nav h1{
 #map_number3{
     font-size: 50px;
 }
+
+.truri{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 100px;
+    gap: 50px;
+}
+
+.imazhi img{
+
+    width: 600px;
+    height: 500px;
+}
+
