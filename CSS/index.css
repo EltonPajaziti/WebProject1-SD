@@ -14,6 +14,9 @@ nav {
     align-items: center;
     padding: 15px 20px;
     background-color: #0b3a56; 
+    position: relative;
+    border-radius: 20px;
+    margin-top: 5px;
 }
 
 .logo img {
@@ -45,8 +48,10 @@ nav {
 }
 
 nav h1{
+    width: 100%;
     color: #ffffff;
-    margin-right: 18%;
+    position: absolute;
+    text-align: center;
 }
 
 
@@ -286,7 +291,7 @@ nav h1{
 
 .imazhi img{
 
-    width: 600px;
-    height: 500px;
+    width: 400px;
+    height: 300px;
 }
 
