@@ -1,0 +1,137 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #a8edea, #fed6e3);
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Magic Advice Box Styling */
+  #advice-box {
+    width: 400px;
+    padding: 35px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    position: relative;
+    text-align: center;
+    color: #333;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: pulseGlow 3s infinite alternate;
+    transition: transform 0.3s;
+  }
+
+  /* Gradient Pulsing Border */
+  #advice-box:before {
+    content: '';
+    position: absolute;
+    top: -8px; bottom: -8px; left: -8px; right: -8px;
+    border-radius: 15px;
+    background: linear-gradient(45deg, #74D6C2, #96ABBE, #FFFFFF, #74D6C2);
+    z-index: -1;
+    filter: blur(15px);
+    opacity: 0.7;
+    animation: borderGlow 5s linear infinite;
+  }
+
+  /* Pulsing and Border Animation */
+  @keyframes pulseGlow {
+    0% { transform: scale(1); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); }
+    100% { transform: scale(1.05); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3); }
+  }
+
+  @keyframes borderGlow {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+  }
+
+  #advice-message {
+    font-size: 1.4em;
+    color: #333;
+    margin-bottom: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #74D6C2, #96ABBE);
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    color: transparent;
+    position: relative;
+}
+
+
+  /* Decorative Icon Around Text */
+  #advice-message:before, #advice-message:after {
+    content: "✨";
+    font-size: 1.2em;
+    margin: 0 8px;
+    color: #74D6C2;
+    opacity: 0.8;
+    animation: shimmer 1.5s infinite alternate;
+  }
+
+  /* Sparkling Underline */
+  #advice-message::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #74D6C2, #FFFFFF, #96ABBE);
+    border-radius: 3px;
+    animation: underlineSparkle 2s infinite linear;
+  }
+
+  @keyframes underlineSparkle {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+  }
+
+  @keyframes shimmer {
+    0% { opacity: 0.6; }
+    100% { opacity: 1; }
+  }
+
+
+  button {
+    padding: 12px 24px;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    background-color: #96ABBE;
+    color: #ffffff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s;
+  }
+
+  button:hover {
+    background-color: #74D6C2;
+  }
+
+  /* Fireflies Effect */
+  .firefly {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    animation: fly 5s ease-in-out infinite;
+  }
+
+  /* Floating Animation */
+  @keyframes fly {
+    0% { transform: translate(0, 0); opacity: 1; }
+    50% { transform: translate(100px, -100px); opacity: 0.5; }
+    100% { transform: translate(0, 0); opacity: 1; }
+  }
+
+  .firefly:nth-child(2) { animation-duration: 6s; }
+  .firefly:nth-child(3) { animation-duration: 4s; }
+  .firefly:nth-child(4) { animation-duration: 5s; }
+  .firefly:nth-child(5) { animation-duration: 7s; }
