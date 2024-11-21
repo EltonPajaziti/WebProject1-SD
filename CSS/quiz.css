@@ -6,16 +6,21 @@ body {
     background-position: center;
     margin: 0;
     padding: 0;
+    
+}
+
+.outter-container{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    
+    margin: 5% auto;
 }
 
 .quiz-container {
     background: #0b3a56af;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     width: 90%;
     max-width: 600px;
@@ -56,7 +61,6 @@ button:hover {
     display: block;
     margin: 10px auto;
     padding: 10px;
-    border: 1px solid #74D6C2;
     border-radius: 5px;
     cursor: pointer;
     background-color: #74D6C2;
@@ -74,4 +78,47 @@ button:hover {
     font-size: 18px;
     font-weight: bold;
     color: #25c049;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+#practices{
+    background-color: #0b3a56af;
+    text-align: center;
+    padding: 1px;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+#practices h1{
+    padding-bottom: 25px;
+}
+
+#practices ul{
+    margin: 0;
+    padding: 0;
+    padding-top: 1px;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+#practices li{
+    padding:8px;
+    background-color: #082c41b0;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    backdrop-filter: blur(10px);
+}
+
+#practices a{
+    color: white;
+    text-decoration: none;
+}
+
+#practices a:hover{
+    color: #74D6C2;
 }
