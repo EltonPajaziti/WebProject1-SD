@@ -91,3 +91,8 @@ document.addEventListener("scroll", function() {
         kryesori.classList.add("shfaqet");
     }
 });
+
+document.getElementById('hamburger-menu').addEventListener('click', function () {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('show');
+});
