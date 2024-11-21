@@ -10,36 +10,17 @@
     </head>
     <body>
         <div class="container text-center my-5">
+            <img src="Images/logo.png" alt="logo" class="logo">
             <!-- Breathing Exercise Section -->
             <div id="breathing-exercise-section">
                 <h2>Breathing Exercise</h2>
                 <p id="breathing-instruction">Follow the circle to guide your breathing.</p>
-                <button id="start-breathing-btn" class="btn btn-primary mt-3">Start Breathing Exercise</button>
+                <button id="start-breathing-btn" class="btn btn-primary mt-3">Start Breathing Exercise</button><br>
                 <br><br>
                 <div id="breathing-circle" class="circle mx-auto"></div>
-                <br>
+                <br><br><br>
                 <button id="stop-breathing-btn" class="btn btn-danger mt-3">Stop Breathing Exercise</button>
             </div>
-            
-            <!-- Lung Capacity Test Section -->
-            <div id="lung-capacity-test-section">
-                <h2>Lung Capacity Test</h2>
-                <p>Test your lung capacity and track your performance.</p>
-                <button id="start-test-btn" class="btn btn-secondary mt-3">Start Lung Capacity Test</button>
-                <button id="stop-test-btn" class="btn btn-danger mt-3" style="display:none;">Stop Test</button>
-                
-                <div id="status-message" style="font-size: 1.5em; text-align: center; margin-top: 20px;"></div>
-            
-                <div class="chart-wrapper d-flex mt-5">
-                    <div id="chart-container" class="chart-container">
-                        <canvas id="lung-chart"></canvas>
-                    </div>
-                    <div id="results" style="display: none;">
-                        <canvas id="results-chart"></canvas>
-                        <p class="text-center mt-3">Your lung capacity: <span id="lung-percentage">0%</span></p>
-                    </div>
-                </div>
-            </div>                                                                      
         </div>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
