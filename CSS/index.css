@@ -17,6 +17,7 @@ nav {
     position: relative;
     border-radius: 20px;
     margin-top: 5px;
+    z-index: 1;
 }
 
 .logo img {
@@ -52,6 +53,7 @@ nav h1{
     color: #ffffff;
     position: absolute;
     text-align: center;
+    z-index: -1;
 }
 
 
