@@ -66,7 +66,7 @@ var numri3 = document.getElementById("map_number3");
 var ikona3 = document.getElementById("map3");
 
 ikona3.onmouseover=function(){
-    ikona3.style.transition="color 5s"
+    ikona3.style.transition="color 5s";
     ikona3.style.color = "red";
     
     var rrit=70;
@@ -76,7 +76,7 @@ ikona3.onmouseover=function(){
         if(rrit>=1000) {
             clearInterval(interval);
         } else {
-            rrit++
+            rrit++;
             numri3.innerHTML=rrit;
         }
     }, 10);
