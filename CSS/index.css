@@ -13,10 +13,11 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    background-color: #2C3E50; 
+    background-color: #74D6C2; 
     position: relative;
     border-radius: 20px;
     margin-top: 5px;
+    z-index: 1;
 }
 
 .logo img {
@@ -52,6 +53,7 @@ nav h1{
     color: #ffffff;
     position: absolute;
     text-align: center;
+    z-index: -1;
 }
 
 
@@ -77,60 +79,6 @@ nav h1{
     max-width: 600px;
 }
 
-/* 
-.slideshow-container {
-    max-width: 100%;
-    margin: 20px auto;
-    overflow: hidden;
-
-}
-
-
-.slide {
-    display: none;
-    width: 100%;
-}
-
-.slide img {
-    display: flex;
-    width: 50%;
-    height: 644px;
-    display: block;
-    padding: 10px 50px;
-    justify-content: center;
-}
-
-
-.dots {
-    text-align: center;
-    margin-top: 10px;
-}
-
-.dot {
-    height: 12px;
-    width: 12px;
-    margin: 5px 3px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.dot.active {
-    background-color: #7fbfbf;
-}
-
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@keyframes fade {
-    from { opacity: 0.4; }
-    to { opacity: 1; }
-} */
-
-
 .footer {
     text-align: center;
     padding: 20px;
@@ -143,10 +91,6 @@ nav h1{
     margin: 0;
     font-size: 14px;
 }
-
-
-/* background-color:rgb(150, 171,190); */
-
 
 #carouselExampleControls{
     margin: 10px 200px;
@@ -296,3 +240,55 @@ nav h1{
     height: 300px;
 }
 
+/*--------------------------------------------------------------------------------------------------------*/
+
+.hamburger {
+    font-size: 30px;
+    padding: 15px;
+    cursor: pointer;
+    /* background-color: #4cbda6; */
+    color: white;
+    /* position: fixed; */
+    top: 15px;
+    left: 15px;
+    z-index: 100;
+}
+
+.menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #0b3a56;
+    width: 250px;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    margin: 20px 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.menu a:hover {
+    background-color: #74D6C2;
+}
+
+.menu.show {
+    display: block;
+}

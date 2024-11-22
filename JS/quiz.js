@@ -22,19 +22,25 @@ const quizData = [
             { text: "Sometimes", score: 2 },
             { text: "No", score: 3 }
         ]
+    },
+    {       
+        question: "How often do you feel connected with people around you?",
+        answers: [
+            { text: "Often", score: 1 },
+            { text: "Sometimes", score: 2 },
+            { text: "Rarely", score: 3 }
+        ]
     }
 ];
 
 var currentQuestionIndex = 0;
 var totalScore = 0;
 
-const questionContainer = document.getElementById('question-container');
-const answersContainer = document.getElementById('answers-container');
-const nextButton = document.getElementById('next-button');
-const resultContainer = document.getElementById('result');
+var questionContainer = document.getElementById('question-container');
+var answersContainer = document.getElementById('answers-container');
+var nextButton = document.getElementById('next-button');
+var resultContainer = document.getElementById('result');
 
-var stress=0;
-var help =0;
 
 
 function loadQuestion() {
@@ -74,17 +80,28 @@ function showResult() {
     answersContainer.classList.add('hidden');
     nextButton.classList.add('hidden');
 
+
     var feedback = '';
-    if (totalScore <= 3) {
-        feedback = "Great! You seem to have good mental well-being habits.";
-    } else if (totalScore <= 6) {
+    if (totalScore <= 4) {
+        feedback = "Great! You seem to have good mental and well-being habits.";
+    } else if (totalScore <= 8) {
         feedback = "You’re doing okay, but there’s room for improvement.";
     } else {
         feedback = "Consider focusing more on self-care and seeking support.";
     }
 
+    
     resultContainer.textContent = feedback;
     resultContainer.classList.remove('hidden');
+    practices.classList.add('visible');
+    practices.style.display="block"
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+    practices.style.display="none";
+});
+
 loadQuestion();
+
+
+

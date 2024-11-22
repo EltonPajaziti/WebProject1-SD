@@ -53,7 +53,7 @@ ikona2.onmouseover=function(){
 
     var interval = setInterval(function() {
 
-        if(rrit>=1000) {
+        if(rrit>=780) {
             clearInterval(interval);
         } else {
             rrit++
@@ -73,13 +73,13 @@ ikona3.onmouseover=function(){
 
     var interval = setInterval(function() {
 
-        if(rrit>=1000) {
+        if(rrit>=3890) {
             clearInterval(interval);
         } else {
             rrit++;
             numri3.innerHTML=rrit;
         }
-    }, 10);
+    }, 3);
 }
 
 document.addEventListener("scroll", function() {
@@ -90,4 +90,9 @@ document.addEventListener("scroll", function() {
     if (pozicioni.top < window.innerHeight && pozicioni.bottom > 0) {
         kryesori.classList.add("shfaqet");
     }
+});
+
+document.getElementById('hamburger-menu').addEventListener('click', function () {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('show');
 });
