@@ -18,7 +18,7 @@ function saveReflection() {
     displayReflections();
     reflectionInput.value = "";
   } else {
-    alert("Ju lutem shkruani mendimin për ta ruajtur!");
+    alert("Write your thought to save them!");
   }
 }
 
@@ -38,7 +38,7 @@ function displayReflections() {
         : "#f1f1f1";
     listItem.innerHTML = `
             <span>${reflection.text} (${reflection.date} ${reflection.time}) - <strong>${reflection.emotion}</strong></span>
-            <button class="delete-button" onclick="deleteReflection(${index})">Fshi</button>
+            <button class="delete-button" onclick="deleteReflection(${index})">Delete</button>
         `;
     savedReflections.appendChild(listItem);
   });
